@@ -1,7 +1,5 @@
 <?php 
-require 'insertion.php';
- require 'selection.php';
- require 'supression.php';
+    require 'function/traitement.php';
 ?> 
 
 <!DOCTYPE html>
@@ -9,7 +7,7 @@ require 'insertion.php';
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="public/index.css">
     <title>Tableau de Bord</title>
     
 </head>
@@ -17,7 +15,7 @@ require 'insertion.php';
 
 <header>
     <h1>Tableau de Bord</h1>
-    <a href="form.php"> Ajouter </a>
+    <a href="pages/form.php"> Ajouter </a>
 </header>
 
 <table>
@@ -43,8 +41,8 @@ require 'insertion.php';
         <td><?= $item['sexe'] ?></td>
         <td><?= $item['fonction'] ?></td> 
         <td> 
-            <a href="/control/form2.php?modif=<?= $item['id']; ?>"><button class="active">modifier</button></a>
-            <a href=  "/control/?suprime=<?= $item['id']; ?>"><button class="desactiver">suprimer</button></a>
+            <a href="pages/form2.php?modif=<?= $item['id']; ?>"><button class="active">modifier</button></a>
+            <a href=  "?suprime=<?= $item['id']; ?>"><button class="desactiver">suprimer</button></a>
         </td>
     </tr>
     <?php endforeach ?> 
