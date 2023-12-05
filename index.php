@@ -17,7 +17,7 @@ require 'insertion.php';
 
 <header>
     <h1>Tableau de Bord</h1>
-    <a href="/form.php"> Ajouter </a>
+    <a href="form.php"> Ajouter </a>
 </header>
 
 <table>
