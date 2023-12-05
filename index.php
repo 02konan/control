@@ -1,4 +1,5 @@
 <?php 
+require 'insertion.php';
  require 'selection.php';
  require 'supression.php';
 ?> 
