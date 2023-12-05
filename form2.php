@@ -40,11 +40,11 @@ require 'mise_a_jour.php';
     <option value="aucune">aucune</option>
     <option value="Directeur" <?= ($fonction_modif === 'Directeur') ? 'selected' : '' ?>>Directeur</option>
     <option value="Professeur" <?= ($fonction_modif === 'Professeur') ? 'selected' : '' ?>>Professeur</option>
-    <option value="Educateur" <?= ($fonction_modif === 'Educateur') ? 'selected' : '' ?>>3</option>
+    <option value="Educateur" <?= ($fonction_modif === 'Educateur') ? 'selected' : '' ?>>Educateur</option>
    </select>
 
     <br> 
-    <a href="http://localhost/control/">initialiser</a> 
+    <a href="/control/index.php/ ">initialiser</a> 
     <input type="submit" name="submit" value="Envoyer">
 </form>
     </div>
