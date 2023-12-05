@@ -1,17 +1,7 @@
-<?php
-
-
-require 'config.php';
-require 'insertion.php';
+<?php 
+  require 'supression.php';
 require 'selection.php';
-require 'supression.php';
-require 'modification.php'; 
-require 'supression.php';
-require 'mise_a_jour.php';
 
-
- 
- 
 ?> 
 
 <!DOCTYPE html>
@@ -50,16 +40,18 @@ require 'mise_a_jour.php';
         <td><?= $item['sexe'] ?></td>
         <td><?= $item['fonction'] ?></td> 
         <td> 
-            <a href="http://localhost/control/form2.php?modif=<?= $item['id']; ?>"><button class="active">modifier</button></a>
-            <a href= "http://localhost/control/?suprime=<?= $item['id']; ?>"><button class="desactiver">suprimer</button></a>
+            <a href="/control/form2.php?modif=<?= $item['id']; ?>"><button class="active">modifier</button></a>
+            <a href=  "/control/?suprime=<?= $item['id']; ?>"><button class="desactiver">suprimer</button></a>
         </td>
     </tr>
     <?php endforeach ?> 
      <div class="return">
      <?php if (isset($resul['select'])): ?>
 
+ <marquee behavior="" direction="left">
 <p><?= $resul['select'] ?></p>
 
+ </marquee>
 <?php endif ?>
      </div>
 </table>

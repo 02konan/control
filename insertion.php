@@ -1,5 +1,6 @@
 <?php
-include 'config.php'; 
+require 'config.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] =='POST') { 
 
@@ -14,14 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] =='POST') {
         $image= $_POST['image'];
 
         if (empty($nom) || empty($prenom) || empty($mot_de_pass) || empty($num) || empty($sexe) || empty($fonction) ) {
-            $msg['insert']="veiller remplie tous les champs svp!";
+            echo"veiller remplie tous les champs svp!";
         }elseif (!is_numeric($num)) {
-            $msg['insert']="numero de telephone incorrect !";
+            echo"numero de telephone incorrect !";
 
         }
          else {
             $sql = "INSERT INTO utilisateur (nom, prenom, mot_de_pass, numero,sexe,fonction,image)
             VALUES (:nom, :prenom, :mot_de_pass , :numero, :sexe, :fonction,:image)";
+
+          $stmt=$con->prepare($sql);
            
         $stmt->bindValue(':nom', $nom);
         $stmt->bindValue(':prenom', $prenom);
@@ -39,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] =='POST') {
             $msg['insert'] = "echec d'enregistrement ";
         }
           
-        $stmt = $con->prepare($sql);
         }
          
     } 

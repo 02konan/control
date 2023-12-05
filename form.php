@@ -1,8 +1,6 @@
 <?php
 require 'insertion.php';
-require 'config.php';
-require 'modification.php'; 
-require 'mise_a_jour.php';  
+   
 
 ?> 
 
@@ -23,7 +21,7 @@ require 'mise_a_jour.php';
 
         <?php endif ?>
     </div>
-    <form action=""  method="POST" > 
+    <form action="index.php"  method="POST" > 
 <label for="image">Image :</label>
     <input type="file" id="image" name="image" ><br>
     <label for="nom">Nom :</label>
@@ -42,11 +40,12 @@ require 'mise_a_jour.php';
     <label for="fonction">Fonction :</label>
     <select name="fonction" id="fonction">
         <option value="aucune">aucune</option>
-        <option value="1" >1</option>
-        <option value="2" >2</option>
-        <option value="3" >3</option>
+        <option value="Directeur" >Directeur</option>
+        <option value="Professeur" >Professeur</option>
+        <option value="Educateur" >Educateur</option>
     </select>
     <br> 
+    <a href="/control/index.php">initialiser</a>
     <input type="submit" name="submit" value="Envoyer">
 </form>
     </div>

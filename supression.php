@@ -1,6 +1,5 @@
 :<?php
 include 'config.php';
-include 'selection.php';
 
 if (isset($_GET['suprime']) && is_numeric($_GET['suprime']))   {
     

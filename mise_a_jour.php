@@ -1,19 +1,19 @@
 <?php
 require 'config.php';
-require 'modification.php';
-require 'selection.php';
-
-if (isset($_GET['modif']) && !empty($_POST['modif'])) {
-     
-    $id = $_GET['modif'];
+ 
+ 
+if ( !empty($_POST['submit']) ) {
+    
+    $id = $_POST['modif'];
     $image = $_POST['image'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
-    $numero = $_POST['numerO'];
+    $numero = $_POST['numero'];
+    $mot_de_pass = $_POST['mot_pass'];
     $sexe = $_POST['sexe'];
     $fonction = $_POST['fonction'];
 
-    $requete = "UPDATE utilisateur SET image = :image, nom = :nom, prenom = :prenom, numero = :numero, sexe = :sexe, fonction = :fonction WHERE id = :id";
+    $requete = "UPDATE utilisateur SET  image = :image, nom = :nom, prenom = :prenom, numero = :numero, sexe = :sexe, fonction = :fonction,mot_de_pass =:mot_pass WHERE id = :id";
 
     $st = $con->prepare($requete);
 
@@ -24,12 +24,10 @@ if (isset($_GET['modif']) && !empty($_POST['modif'])) {
     $st->bindParam(':numero', $numero);
     $st->bindParam(':sexe', $sexe);
     $st->bindParam(':fonction', $fonction);
-
-    try {
-        $st->execute();
-        echo 'mise à jour réussie';
-    } catch (PDOException $e) {
-        echo 'une erreur s\'est produite' . $e->getMessage();
-    }
-}
+     $st->bindParam(':mot_pass', $mot_de_pass);
+    
+    
+ $st->execute();
+    
+} 
 ?>
