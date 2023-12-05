@@ -14,7 +14,10 @@
 </head>
 <body>
 
-<h1>Tableau de Bord</h1>
+<header>
+    <h1>Tableau de Bord</h1>
+    <a href="/form.php"> Ajouter </a>
+</header>
 
 <table>
     <tr>
