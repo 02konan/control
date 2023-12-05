@@ -2,7 +2,7 @@
    try {
 
     $nom_utilisateur='root';
-    $mot_pass='';
+    $mot_pass='password';
     $con = new PDO("mysql:host=localhost;dbname=controleur", $nom_utilisateur, $mot_pass);
 
    } catch (PDOException $e) {
