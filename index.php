@@ -1,7 +1,6 @@
 <?php 
-  require 'supression.php';
-require 'selection.php';
-
+ require 'selection.php';
+ require 'supression.php';
 ?> 
 
 <!DOCTYPE html>
@@ -46,7 +45,7 @@ require 'selection.php';
     </tr>
     <?php endforeach ?> 
      <div class="return">
-     <?php if (isset($resul['select'])): ?>
+     <?php if (isset($resul['select'])) : ?>
 
  <marquee behavior="" direction="left">
 <p><?= $resul['select'] ?></p>

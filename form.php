@@ -1,6 +1,5 @@
 <?php
-require 'insertion.php';
-   
+require 'insertion.php';   
 
 ?> 
 

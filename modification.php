@@ -1,5 +1,7 @@
 <?php
 require 'config.php';
+
+
 if (isset($_GET['modif']) && is_numeric($_GET['modif'])) {
     
     $id = $_GET['modif'];
